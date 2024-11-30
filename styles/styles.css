@@ -3,7 +3,30 @@
 @tailwind utilities;
 
 /* Global */
-* {
+.horizontal-divider {
+    border-left: 1px solid #D5D1CC;
+    height: 100%;
+}
+.background-consultations {
+    background-image: 
+        url("../img/background-leaf-5.svg"),
+        url("../img/background-circle-1.svg");
+    background-position: 
+        top right, 
+        bottom center; 
+    background-repeat: no-repeat, no-repeat;
+}
+.background-cabinets {
+    background-image: 
+        url("../img/background-leaf-5.svg"),
+        url("../img/background-circle-1.svg");
+    background-position: 
+        top right, 
+        bottom center; 
+    background-repeat: no-repeat, no-repeat;
+}
+
+/* * {
     margin: 0;
     box-sizing: border-box;
 }
@@ -12,7 +35,7 @@ html {
 }
 body {
     font-family: sans-serif;
-    font-size: 1.6rem; /* 16px */
+    font-size: 1.6rem;
 }
 a {
     all: unset;
@@ -31,13 +54,4 @@ button {
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
 }
-
-/* RESPONSIVE BREAKPOINTS */ 
-/* Tablettes et moyennes écrans */
-@media screen and (max-width: 992px){
-    
-}
-/* Portables et petits écrans */
-@media screen and (max-width: 576px){
-    
-}
+ */
