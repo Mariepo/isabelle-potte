@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Isabelle Potte - Psychologue à Fruges et Hucqliers</title>
     <link href="./styles/output.css" rel="stylesheet">
+    <link href="./styles/animations.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,13 +36,13 @@
         </div>
     </nav>
     
-    <header class="text-white bg-header bg-cover h-svh">
+    <header class="text-white bg-header bg-fixed bg-cover h-svh">
         <div class="px-6 xl:px-0 max-w-7xl mx-auto flex flex-col justify-center gap-7 h-full">
-            <h1 class="-mt-11 text-6xl font-serif">Prendre soin de soi commence ici.</h1>
-            <p class="text-lg max-w-3xl font-medium leading-relaxed">
+            <h1 class="-mt-11 text-6xl font-serif hero-details">Prendre soin de soi commence <span class="highlighter">ici</span></h1>
+            <p class="text-lg max-w-3xl font-medium leading-relaxed hero-details">
                 Découvrez mes services et prenez un premier pas vers le mieux-être. Que ce soit pour une consultation individuelle, de la gestion du stress ou un accompagnement thérapeutique, je suis à votre écoute.
             </p>
-            <p class="text-lg max-w-3xl font-medium leading-relaxed">
+            <p class="text-lg max-w-3xl font-medium leading-relaxed hero-details">
                 Ma méthode repose sur une écoute attentive et un accompagnement personnalisé, afin de vous aider à trouver des solutions concrètes pour avancer dans votre vie.
             </p>
         </div>
@@ -73,7 +74,7 @@
             </div>
         </section> 
         <section class="px-6 xl:px-0 pt-7 md:pb-40 pb-56 background-cabinets">
-            <div class="max-w-5xl mx-auto flex justify-between flex-col md:flex-row gap-8 md:gap-0">
+            <div class="max-w-5xl mx-auto flex justify-between flex-col md:flex-row gap-8 md:gap-0 z-40 relative">
                 <div class="min-w-[46%]">
                     <div>
                         <h3 class="text-2xl font-bold text-orange-900 mb-5">Cabinet de Fruges</h3>
@@ -99,27 +100,27 @@
                 </div>
             </div>
         </section>
-        <section id="accompagnement" class="px-6 xl:px-0 md:pt-14 pb-6 md:pb-24">
+        <section id="accompagnement" class="scroll-mt-40 px-6 xl:px-0 md:pt-14 pb-6 lg:pb-24">
             <div class="max-w-6xl mx-auto">
                 <h2 class="text-4xl font-serif text-orange-900 text-center mb-6">Comment puis-je vous aider ?</h2>
                 <p class="sm:max-w-2xl mx-auto text-gray-500 text-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum eget morbi dignissim eu pharetra consequat montes, sagittis.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 mt-14 gap-16">
-                    <div>
+                    <div class="accompagnement-details">
                         <img src="./img/placeholder.png" alt="" class="max-w-9 mb-4">
                         <h3 class="text-xl font-bold mb-3">Psychologie de l'adulte</h3>
                         <p class="text-sm leading-relaxed text-gray-500">Lorem ipsum dolor sit amet consectetur. Ullamcorper mauris facilisis sed eu nibh a.</p>
                     </div>
-                    <div>
+                    <div class="accompagnement-details">
                         <img gap-12 src="./img/placeholder.png" alt="" class="max-w-9 mb-4">
                         <h3 class="text-xl font-bold mb-3">Stress et anxiété</h3>
                         <p class="text-sm leading-relaxed line-h text-gray-500">Lorem ipsum dolor sit amet consectetur. Ullamcorper mauris facilisis sed eu nibh a.</p>
                     </div>
-                    <div>
+                    <div class="accompagnement-details">
                         <img gap-12 src="./img/placeholder.png" alt="" class="max-w-9 mb-4">
                         <h3 class="text-xl font-bold mb-3">Burn-out, bore-out</h3>
                         <p class="text-sm leading-relaxed text-gray-500">Lorem ipsum dolor sit amet consectetur. Ullamcorper mauris facilisis sed eu nibh a.</p>
                     </div>
-                    <div>
+                    <div class="accompagnement-details">
                         <img gap-12 src="./img/placeholder.png" alt="" class="max-w-9 mb-4">
                         <h3 class="text-xl font-bold mb-3">Dépression</h3>
                         <p class="text-sm leading-relaxed text-gray-500">Lorem ipsum dolor sit amet consectetur. Ullamcorper mauris facilisis sed eu nibh a.</p>
@@ -127,8 +128,8 @@
                 </div>
             </div>
         </section> 
-        <section id="a-propos" class="px-6 xl:px-0 pt-24 md:pt-44 pb-56 background-a-propos">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-8">
+        <section id="a-propos" class="px-6 xl:px-0 pt-32 md:pt-44 pb-56 background-a-propos -mb-32 b">
+            <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-8 z-40 relative">
                 <div>
                     <h2 class="text-4xl font-serif text-orange-900 mb-6">À propos de moi</h2>
                     <div class="text-gray-500 text-lg">
@@ -144,42 +145,44 @@
                         <p class="mt-7">Je vous accueille dans un lieu <span class="text-orange-900">bienveillant, apaisant, empathique</span>. Je suis à votre écoute dans le respect et la confidentialité de ma pratique.</p>
                         <div class="mt-10">
                             <h4 class="text-gray-900 font-bold text-xl mb-2">Diplôme & certifications :</h4>
-                            <div class="flex items-center gap-2 py-1 font-medium">
+                            <div class="flex items-center gap-2 py-1 font-medium diplome-details">
                                 <span class="material-icons-round text-orange-900">check_circle_outline</span>
                                 <span>Diplôme de Psychologue du travail</span>
                             </div>
-                            <div class="flex items-center gap-2 py-1 font-medium">
+                            <div class="flex items-center gap-2 py-1 font-medium diplome-details">
                                 <span class="material-icons-round text-orange-900">check_circle_outline</span>
                                 <span>Certification MBTI</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <img src="./img/a-propos.jpg" alt="" class="rounded-2xl">
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="./img/a-propos.jpg" alt="" class=" h-full w-full">
+                </div>
             </div>
         </section> 
-        <section id="questions-frequentes" class="px-6 xl:px-0 scroll-mt-32 pt-32 pb-36 -mt-32 bg-wave-3 bg-cover bg-center xl:bg-wave-3-xl  text-white">
+        <section id="questions-frequentes" class="relative px-6 xl:px-0 scroll-mt-32 pt-32 pb-36 bg-wave-3 bg-cover bg-center xl:bg-wave-3-xl  text-white">
             <div class="max-w-5xl mx-auto">
                 <h2 class="text-4xl font-serif mb-6 text-center text-blue-100">Questions fréquentes</h2>
                 <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 gap-x-28 gap-y-14">
-                    <div>
+                    <div class="questions-frequentes-details">
                         <span class="material-icons-round text-orange-900 bg-white p-3 rounded-full">schedule</span>
                         <h3 class="mt-6 text-xl font-bold mb-3">Combien de temps dure une séance ?</h3>
                         <p>Une séance dure <span class="font-bold">45 minutes</span>. Cette durée permet d’aborder les sujets importants sans être pressé par le temps, tout en respectant votre rythme.</p>
                     </div>                    
-                    <div>
+                    <div class="questions-frequentes-details">
                         <span class="material-icons-round text-orange-900 bg-white p-3 rounded-full">euro</span>
                         <h3 class="mt-6 text-xl font-bold mb-3">Quel est le prix d'une séance ?</h3>
                         <p>Le tarif d'une séance est de <span class="font-bold">55€</span>. Une facture vous sera remise à l'issue de chaque consultation, afin de solliciter un remboursement auprès de votre mutuelle.</p>
                     </div> 
                 </div>                      
                 <div class="mt-14 md:mt-24 grid grid-cols-1 sm:grid-cols-2 gap-x-28 gap-y-14">               
-                    <div>
+                    <div class="questions-frequentes-details">
                         <span class="material-icons-round text-orange-900 bg-white p-3 rounded-full">phone</span>
                         <h3 class="mt-6 text-xl font-bold mb-3">Comment puis-je prendre rendez-vous ?</h3>
                         <p>Vous pouvez prendre rendez-vous en me contactant par téléphone au <span class="font-bold">06 81 95 97 47</span> entre <span class="font-bold">14h et 18h les jeudi et vendredi</span> ou par email à <a href="mailto:isabelle.potte.psy@gmail.com" class="font-bold underline">isabelle.potte.psy@gmail.com</a></p>
                     </div>                    
-                    <div>
+                    <div class="questions-frequentes-details">
                         <span class="material-icons-round text-orange-900 bg-white p-3 rounded-full">credit_card</span>
                         <h3 class="mt-6 text-xl font-bold mb-3">Quels sont les moyens de paiement acceptés ?</h3>
                         <p>Vous pouvez régler les séances en <span class="font-bold">espèces ou par chèque</span>. Veuillez noter que je ne suis pas en mesure d'accepter les paiements par carte bancaire.</p>
@@ -188,14 +191,14 @@
             </div>
         </section> 
         <section class="px-6 xl:px-0 pt-28 pb-32 background-consultations">
-            <div class="max-w-6xl mx-auto">
+            <div class="max-w-6xl mx-auto relative z-40">
                 <h2 class="text-4xl font-serif mb-6 text-center text-blue-900">Les lieux de consultation en photos</h2>
                 <div class="mt-12 flex gap-6 flex-wrap sm:flex-nowrap">
-                    <div>
-                        <img src="./img/msp-fruges.jpg" alt="">
+                    <div class="overflow-hidden">
+                        <img src="./img/msp-fruges.jpg" alt="" class="consultations-img">
                     </div>
-                    <div>
-                        <img src="./img/msp-hucqueliers.jpg" alt="">
+                    <div class="overflow-hidden">
+                        <img src="./img/msp-hucqueliers.jpg" alt="" class="consultations-img">
                     </div>
                 </div>
             </div>
@@ -233,26 +236,7 @@
         </ul>
     </footer>
 
-    <script>
-        const hamburger = document.querySelector(".hamburger");
-        const hamburgerIcon = document.querySelector(".hamburger-icon")
-        const navMenu = document.querySelector(".nav-menu");
-        hamburger.addEventListener("click", () => {
-            navMenu.classList.toggle("active");
-            if (hamburgerIcon.innerText === "menu") {
-            hamburgerIcon.innerText = "close";
-            } else {
-                hamburgerIcon.innerText = "menu";
-            }
-        })
-
-        const navItem = document.querySelectorAll(".nav-item");
-        navItem.forEach(n => n.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-            hamburgerIcon.innerText = "menu";
-        }))
-
-    </script>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="script/script.js"></script>
 </body>
 </html>
