@@ -11,12 +11,22 @@ $(document).ready(function() {
         }
     })
     // close menu on link click
-    $('.nav-item').on("click", function (event) {
+    $('.nav-menu').on("click", ".nav-item", function () {
         $('.nav-menu').removeClass('active');
         $('.hamburger-icon').text("menu");
-    })
+    });
+    
         
     // Animations CSS
+    //  trigger function only once per use case
+    let debounce = (func, delay) => {
+        let timer;
+        return function (...args) {
+            clearTimeout(timer);
+            timer = setTimeout(() => func.apply(this, args), delay);
+        };
+    };    
+
     function hideElementToAnimate(elementToHide) {
         $(elementToHide).css("visibility", "hidden");
     }
@@ -26,22 +36,20 @@ $(document).ready(function() {
     hideElementToAnimate('.hero-details');
 
     function triggerAnimationOnScroll(elementToAnimate, animation) {
-        $(elementToAnimate).each(function(index) {
+        $(elementToAnimate).not('.animated').each(function (index) {
             if (isScrolledIntoView($(this))) {
-                    setTimeout(() => {
-                    $(this).addClass(animation);
+                setTimeout(() => {
+                    $(this).addClass(`${animation} animated`);
                     $(this).css("visibility", "visible");
-                }, index * 1000);
+                }, index * 1000); 
             }
         });
     }
-    $(window).on('scroll', function() {
+    $(window).on('scroll', debounce(() => {
         triggerAnimationOnScroll(".accompagnement-details", 'bounce-in-up');
         triggerAnimationOnScroll(".questions-frequentes-details", 'slide-up');
         triggerAnimationOnScroll(".diplome-details", 'slide-from-left');
-    });
-    console.log($(".questions-frequentes-details"))
-
+    }, 100)); 
 
     
     function isScrolledIntoView(elem) {
@@ -54,7 +62,7 @@ $(document).ready(function() {
         return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
     }
     
-    function triggerAnimationWhitoutScroll(elementToAnimate, animation) {
+    function triggerAnimationWhithoutScroll(elementToAnimate, animation) {
         $(elementToAnimate).each(function(index) {
             setTimeout(() => {
                 $(this).addClass(animation);
@@ -62,6 +70,6 @@ $(document).ready(function() {
             }, index * 1000);
         });
     }
-    triggerAnimationWhitoutScroll(".hero-details", 'slight-slide-up');
+    triggerAnimationWhithoutScroll(".hero-details", 'slight-slide-up');
 
 })
