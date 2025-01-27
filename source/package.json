@@ -5,7 +5,7 @@
   "scripts": {
     "start": "npx tailwindcss -i ./styles/styles.css -o ./styles/output.css --watch",
     "build-css": "npx tailwindcss -i ./styles/styles.css -o ./styles/output.css --minify",
-    "build": "npm run build-css && mkdir -p ../build && mkdir -p ../build/styles && cp index.html ../build/ && cp -r img/ ../build/img && cp -r script/ ../build/script && cp styles/output.css ../build/styles && cp styles/animations.css ../build/styles"
+    "build": "npm run build-css && mkdir -p ../build && mkdir -p ../build/styles && cp index.html ../build/ && cp -r img/ ../build/img && cp -r script/ ../build/script && cp styles/output.css ../build/styles && cp styles/animations.css ../build/styles && cp favicon.ico ../build/ && cp favicon.png ../build/"
 
 
   },
